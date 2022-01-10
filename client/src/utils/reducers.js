@@ -12,6 +12,15 @@ import {
 
 // removed useReducer from React
 
+// need to add default state to make this work haha
+const defaultState = {
+    products: [],
+    categories: [],
+    currentCategory: '',
+    cart: [],
+    cartOpen: false,
+}
+
 // changed this to a REDUX reducer function by adding `state=defaultState`
 export default function reducer(state=defaultState, action) {
     switch (action.type) {
