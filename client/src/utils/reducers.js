@@ -10,9 +10,10 @@ import {
     TOGGLE_CART
 } from './actions';
 
-import { useReducer } from 'react';
+// removed useReducer from React
 
-export const reducer = (state, action) => {
+// changed this to a REDUX reducer function by adding `state=defaultState`
+export default function reducer(state=defaultState, action) {
     switch (action.type) {
         // if action type value is the value of 'UPDATE_PRODUCTS', return a new state object with an update products array
         case UPDATE_PRODUCTS:
@@ -89,6 +90,7 @@ export const reducer = (state, action) => {
     }
 };
 
-export function useProductReducer(initialState) {
-    return useReducer(reducer, initialState);
-}
+//commenting this out for now until I know I don't need it for sure.
+// export function useProductReducer(initialState) {
+//     return useReducer(reducer, initialState);
+// }
