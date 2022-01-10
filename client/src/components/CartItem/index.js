@@ -1,14 +1,12 @@
 import React from "react";
 // replacing this with redux
 // import { useStoreContext } from "../../utils/GlobalState";
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 
 const CartItem = ({ item }) => {
-    const state = useSelector((state) => {
-        return state
-    });
+    // added state at first but realized it was not needed
     const dispatch = useDispatch()
 
     // refactored to above for Redux
